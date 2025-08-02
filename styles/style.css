@@ -1,14 +1,28 @@
-@import url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+/* 
+What changes in the mobile version?
+padding of card-content --> reduces (with border box it's also padding)
+width of buttons --> reduces (buttons just fill the card, card reducing in size should do this too)
+width of card --> reduces
+description paragraph font size --> increases
+*/
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: 100 700;
+}
 
 * {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   box-sizing: border-box;
+  color: var(--white);
 }
 
 :root {
-  --link: hsl(228, 45%, 44%);
   --green: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
   --grey700: hsl(0, 0%, 20%);
@@ -21,10 +35,89 @@
   /* font-size: 14px; */
 }
 
+html,
+body {
+  background-color: var(--grey900);
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  padding-top: 1em;
+  height: calc(100vh - 1em);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 36.5em;
+  width: 23em;
+  border-radius: 0.7em;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey800);
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-container img.image {
+  width: 5.2em;
+  border-radius: 3em;
+  object-fit: cover;
+}
+
+.details-container p.description {
+  margin-top: 2em;
+  font-size: 0.875em;
+  font-weight: 300;
+}
+
+.name-location {
+  margin-top: 1.5em;
+}
+.name-location h1 {
+  font-size: 1.45em;
+  font-weight: 500;
+  margin-bottom: 0.45em;
+}
+
+.name-location p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.name-location > h1,
+p {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em 0;
+}
+
+.button {
+  background-color: var(--grey700);
+  text-decoration: none;
+  margin: 0.5em 0;
+  width: 100%;
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875em;
   text-align: center;
 }
 .attribution a {
-  color: var(--link);
+  color: var(--green);
 }
