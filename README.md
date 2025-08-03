@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/social-links-preview-with-css-flexbox-GnQaKZxF67)
 - Live Site URL: [Vercel](https://social-links-preview-card.vercel.app)
 
 ## My process
@@ -33,4 +33,4 @@ Users should be able to:
 
 ### Continued development
 
-I would like to work on accessability and resizing elements based on screen sizes, as well as furthering my understanding of how parent divs interact with child content.
+- I would like to work on accessability and resizing elements based on screen sizes, as well as furthering my understanding of how parent divs interact with child content.
