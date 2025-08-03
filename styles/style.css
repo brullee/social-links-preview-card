@@ -1,6 +1,6 @@
 /* 
 What changes in the mobile version?
-padding of card-content --> reduces (with border box it's also padding)
+width of card-content --> reduces (with border box it's also padding)
 width of buttons --> reduces (buttons just fill the card, card reducing in size should do this too)
 width of card --> reduces
 description paragraph font size --> increases
@@ -28,11 +28,6 @@ description paragraph font size --> increases
   --grey700: hsl(0, 0%, 20%);
   --grey800: hsl(0, 0%, 12%);
   --grey900: hsl(0, 0%, 8%);
-  --bold: 700;
-  --semi-bold: 600;
-  --thin: 400;
-
-  /* font-size: 14px; */
 }
 
 html,
@@ -52,14 +47,22 @@ section {
 }
 
 .card {
-  height: 36.5em;
+  /* height: 36.5em;*/
   width: 23em;
+  min-width: 20;
   border-radius: 0.7em;
   padding: 2.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--grey800);
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 20em;
+    padding: 1.8em;
+  }
 }
 
 .details-container {
@@ -76,21 +79,21 @@ section {
 
 .details-container p.description {
   margin-top: 2em;
-  font-size: 0.875em;
+  font-size: 13px;
   font-weight: 300;
 }
 
 .name-location {
-  margin-top: 1.5em;
+  margin-top: 1.6em;
 }
 .name-location h1 {
-  font-size: 1.45em;
+  font-size: 23.2px;
   font-weight: 500;
-  margin-bottom: 0.45em;
+  margin-bottom: 0.39em;
 }
 
 .name-location p {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--green);
 }
@@ -104,14 +107,32 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.5em 0;
+  margin-top: 0.6875em;
+  width: 100%;
 }
 
 .button {
-  background-color: var(--grey700);
-  text-decoration: none;
-  margin: 0.5em 0;
+  margin: 1.2em 0 0 0;
   width: 100%;
+  height: 3.6em;
+  border-radius: 0.5em;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--grey700);
+}
+
+.button:hover {
+  background-color: var(--green);
+  color: var(--grey800);
+}
+
+.button:focus {
+  width: 99%;
 }
 
 .attribution {
